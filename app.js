@@ -34,7 +34,7 @@ const swiper3 = new Swiper(".partners-slider-container", {
     slidesPerView: 4,
     breakpoints: {
         1300: {
-            slidesPerView: 3.5,
+            slidesPerView: 3,
         },
         991: {
             slidesPerView: 2.5,

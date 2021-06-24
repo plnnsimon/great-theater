@@ -442,7 +442,7 @@ strong {
 }
 .stars img {
     width: 24px;
-    margin-right: 25px;
+    margin: 0 10px;
 }
 
 .partners {
@@ -679,6 +679,10 @@ footer {
     .header-content-left {
         margin-left: 42px;
     }
+    .partners-slider {
+        align-items: center;
+        max-width: 800px;
+    }
 }
 @media screen and (max-width: 1346px) {
     .header-top {
@@ -838,6 +842,7 @@ footer {
     .footer-wrapper {
         margin-top: 60px;
     }
+    
 }
 @media screen and (max-width: 768px) {
     header {
@@ -992,6 +997,7 @@ footer {
         width: 300px;
         flex-direction: column;
         align-items: center;
+        margin-top: 20px;
     }
     .footer-wrapper span {
         margin: 10px;
