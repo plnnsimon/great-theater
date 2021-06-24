@@ -1016,3 +1016,17 @@ footer {
     }
     
 }
+@media screen and (max-height: 670px) {
+    .burger-menu {
+        justify-content: space-around;
+    }
+    .close-btn {
+        margin-bottom: 30px;
+    }
+    .burger-menu nav a {
+        padding-bottom: 15px;
+    }
+    .social {
+        margin-top: 30px;
+    }
+}
