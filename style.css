@@ -483,6 +483,7 @@ strong {
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 50px;
+    align-items: center;
 }
 .partners-slide img {
     max-width: 200px;

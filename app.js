@@ -33,6 +33,9 @@ const swiper3 = new Swiper(".partners-slider-container", {
     loop: true,
     slidesPerView: 4,
     breakpoints: {
+        1400: {
+            slidesPerView: 4,
+        },
         1300: {
             slidesPerView: 3,
         },
