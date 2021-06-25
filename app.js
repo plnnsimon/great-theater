@@ -10,13 +10,15 @@ const swiper = new Swiper(".header-content-right", {
 
 const swiper2 = new Swiper(".prod", {
     loop: true,
-    slidesPerView: 3.3,
+    slidesPerView: 4,
     breakpoints: {
-        1180: {
+        1400: {
+            slidesPerView: 4,
+        },        
+        1100: {
             slidesPerView: 3.3,
-        },
-        
-        850: {
+        },        
+        992: {
             slidesPerView: 2.3,
         },
         600: {

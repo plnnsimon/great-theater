@@ -38,7 +38,7 @@ header {
 .header-top nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 .header-top nav a {
     font-size: 18px;
@@ -46,6 +46,7 @@ header {
     margin-right: 60px;
     text-decoration: none;
     color: white;
+    letter-spacing: 0.1em;
 }
 
 .side-bar {
@@ -59,38 +60,60 @@ header {
     position: fixed;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: flex-end;
     align-items: center;
     width: 150px;
     height: 100%;
     background: rgba(51, 51, 51, 0.75);
-    padding-bottom: 50px;
     z-index: 999;
+    overflow: auto;
 }
-
-.side-bar a {
-    color: #C4C4C4;
-    margin: 15px 0;
-    font-size: 26px;
+.side-bar-wrapper {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    height: 1045px;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 40px;
 }
-.side-bar a:hover {
-    color: #D1A954;
+.side-bar-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 150px;
+    align-items: center;
+    height: 220px;
+    margin-bottom: 35px;
 }
-.side-bar span {
+.side-bar-info span {
+    transform: rotate(-90deg);
+    width: 244px;
+    font-family: Open Sans Condensed;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    transform: rotate(-90deg);
-    width: 440px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 15rem;
+    color: #C4C4C4;
 }
-.side-bar span::before {
-    content: "";
+.side-bar-info hr {
+    transform: rotate(-90deg);
     width: 80px;
-    height: 2px;
-    background: #C4C4C4;
-    margin-right: 40px;
+    height: 4px;
+}
+.side-bar-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.side-bar-links a{
+    color: #C4C4C4;
+    margin: 10px 0;
+    font-size: 26px;
+}
+.side-bar-links a:hover {
+    color: #D1A954;
 }
 
 .header-content {
@@ -124,6 +147,7 @@ header {
     font-size: 64px;
     line-height: 87px;
     margin-bottom: 50px;
+    letter-spacing: 0.1em;
 }
 .header-content-left p {
     font-family: "Open Sans", sans-serif;
@@ -250,7 +274,7 @@ header {
     font-size: 14px;
     line-height: 150%;
     margin-top: 40px;
-    max-width: 445px;
+    width: 445px;
     height: auto;
     margin-right: 30px;
 }
@@ -271,16 +295,17 @@ header {
 .theater-icon {
     display: flex;
     flex-direction: column;
+    padding-bottom: 25px;
     
 }
 .theater-icon span {
     font-size: 16px;
     line-height: 22px;
     letter-spacing: 0.05em;
-    margin-top: 15px;
-    margin-bottom: 0;
+    margin: 15px 0 0 0;
+    text-align: left;
     text-transform: none;
-    padding-bottom: 15px;
+    padding-right: 15px;
 }
 strong {
     color: #D1A954;
@@ -304,10 +329,9 @@ strong {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 1770px;
     width: 100%;
 }
-.production-wrapper span {
+.production-title {
     margin: 0 auto;
     font-size: 48px;
     line-height: 65px;
@@ -368,8 +392,8 @@ strong {
 .prod-left {
     position: absolute;
     transform: rotate(-90deg);
-    bottom: 40px;
-    left: 40px;
+    bottom: 80px;
+    left: 0;
     font-size: 18px !important;
     line-height: 25px;
     z-index: 1;
@@ -483,7 +507,6 @@ strong {
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 50px;
-    align-items: center;
 }
 .partners-slide img {
     max-width: 200px;
@@ -548,7 +571,9 @@ strong {
     font-weight: 600;
     font-size: 12px;
     line-height: 150%;
-    
+}
+.form input {
+    outline: none;
 }
 .form-block1::placeholder {
     color: #989898;
@@ -563,7 +588,6 @@ strong {
     background: #444444;
     border: 1px solid #616161;
     box-sizing: border-box;
-    outline: none;
     color: white;
 }
 .form-block1 {
@@ -574,6 +598,7 @@ strong {
     border: 1px solid #616161;
     box-sizing: border-box;
     color: white;
+    outline: none;
 }
 
 .information {
@@ -674,14 +699,10 @@ footer {
     .header-content-left p {
         margin-right: 0;
     }
-    .header-content-right {
-        display: none;
-    }
     .header-content-left {
         margin-left: 42px;
     }
     .partners-slider {
-        align-items: center;
         max-width: 800px;
     }
 }
@@ -698,7 +719,10 @@ footer {
         display: none;
     }
     .about-content {
-        margin-left: 80px;
+        margin-left: 40px;
+    }
+    .theater-capacity {
+        margin-right: 0;
     }
     .awards {
         width: 100%;
@@ -708,16 +732,21 @@ footer {
     }
     
 }
+@media screen and (max-width: 1300px) {
+    .header-content-right {
+        display: none;
+    }
+    .header-top nav a {
+        margin-right: 25px;
+    }
+}
 @media screen and (max-width: 1100px) {
     .header-top nav {
-        max-width: 600px;
+        width: 800px;
         margin-left: 30px;
     }
     .about-wrapper {
         max-width: 690px;
-    }
-    .prod-container {
-        padding: 0 39px;
     }
     .awards-years {
         margin-left: 190px;
@@ -744,12 +773,14 @@ footer {
         flex-direction: inherit;
     }
     .header-top span {
-        margin-top: 0;
+        margin-top: 30px;
+        position: fixed;
     }
     .side-bar {
         display: none;
     }
     .burger-menu {
+        overflow: auto;
         display: none;
         flex-direction: column;
         width: 300px;
@@ -816,11 +847,8 @@ footer {
     .about-wrapper {
         margin-left: 0;
     }
-    .production-wrapper span {
-        padding-bottom: 60px;
-    }
     .prod-container {
-        padding-left: 39px;
+        padding: 0 84px 0 191px;
     }
     .awards-wrapper {
         width: 768px;
@@ -869,12 +897,15 @@ footer {
         margin: 80px 0 60px;
     }
     .about-content {
+        align-items: center;
         flex-direction: column;
         text-align: center;
         margin: 0 20px;
     }
     .about-content-text p {
+        width: 100%;
         margin: 40px 0 27px;
+        padding: 0 30px;
     }
     .theater-capacity {
         margin: 0;
@@ -887,6 +918,9 @@ footer {
     }
     .production {
         margin-top: 80px;
+    }
+    .prod-container {
+        padding: 0 39px;
     }
     .awards-content p {
         font-size: 25px;
@@ -907,6 +941,7 @@ footer {
     }
     .contact-information{
         align-items: center;
+        margin: 0 20px;
     }
     .form {
         justify-content: space-between;
@@ -915,12 +950,13 @@ footer {
     }
     .form-block {
         margin: 0;
+        width: 45%;
     }
     .form-block input {
-        width: 230px;
+        width: 100%;
     }
     .form-block1 {
-        width: 509px;
+        width: 100%;
     }
     .information {
         flex-direction: column-reverse;
@@ -951,6 +987,9 @@ footer {
     }
 }
 @media screen and (max-width: 567px) {
+    .header-content-left {
+        margin: 70px 32px 0;
+    }
     .header-content-wrapper {
         padding-top: 30px;
     }
@@ -972,13 +1011,10 @@ footer {
         padding: 0;
     }
     .form {
-        max-width: 300px;
+        width: 100%;
     }
     .form input {
         width: 100%;
-    }
-    .form-block {
-        width: 130px;
     }
     .patron-wrapper {
         min-width: 350px;
@@ -1015,18 +1051,4 @@ footer {
         left: 20px;
     }
     
-}
-@media screen and (max-height: 670px) {
-    .burger-menu {
-        justify-content: space-around;
-    }
-    .close-btn {
-        margin-bottom: 30px;
-    }
-    .burger-menu nav a {
-        padding-bottom: 15px;
-    }
-    .social {
-        margin-top: 30px;
-    }
 }
